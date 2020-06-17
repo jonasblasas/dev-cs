@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  playground:
+    build: ./cs
+    image: cs-playground:latest
+    container_name: cs-playground
+    working_dir: /workspace/src/myApp
+    entrypoint: dotnet run
+    volumes:
+      - ./workspace/src/myApp:/workspace/src/myApp
